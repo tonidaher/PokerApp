@@ -1,0 +1,257 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Icons\Deck_Icons\10c.JPG" />
+    <None Remove="Icons\Deck_Icons\10d.JPG" />
+    <None Remove="Icons\Deck_Icons\10h.JPG" />
+    <None Remove="Icons\Deck_Icons\10s.JPG" />
+    <None Remove="Icons\Deck_Icons\2c.JPG" />
+    <None Remove="Icons\Deck_Icons\2d.JPG" />
+    <None Remove="Icons\Deck_Icons\2h.JPG" />
+    <None Remove="Icons\Deck_Icons\2s.JPG" />
+    <None Remove="Icons\Deck_Icons\3c.JPG" />
+    <None Remove="Icons\Deck_Icons\3d.JPG" />
+    <None Remove="Icons\Deck_Icons\3h.JPG" />
+    <None Remove="Icons\Deck_Icons\3s.JPG" />
+    <None Remove="Icons\Deck_Icons\4c.JPG" />
+    <None Remove="Icons\Deck_Icons\4d.JPG" />
+    <None Remove="Icons\Deck_Icons\4h.JPG" />
+    <None Remove="Icons\Deck_Icons\4s.JPG" />
+    <None Remove="Icons\Deck_Icons\5c.JPG" />
+    <None Remove="Icons\Deck_Icons\5d.JPG" />
+    <None Remove="Icons\Deck_Icons\5h.JPG" />
+    <None Remove="Icons\Deck_Icons\5s.JPG" />
+    <None Remove="Icons\Deck_Icons\6c.JPG" />
+    <None Remove="Icons\Deck_Icons\6d.JPG" />
+    <None Remove="Icons\Deck_Icons\6h.JPG" />
+    <None Remove="Icons\Deck_Icons\6s.JPG" />
+    <None Remove="Icons\Deck_Icons\7c.JPG" />
+    <None Remove="Icons\Deck_Icons\7d.JPG" />
+    <None Remove="Icons\Deck_Icons\7h.JPG" />
+    <None Remove="Icons\Deck_Icons\7s.JPG" />
+    <None Remove="Icons\Deck_Icons\8c.JPG" />
+    <None Remove="Icons\Deck_Icons\8d.JPG" />
+    <None Remove="Icons\Deck_Icons\8h.JPG" />
+    <None Remove="Icons\Deck_Icons\8s.JPG" />
+    <None Remove="Icons\Deck_Icons\9c.JPG" />
+    <None Remove="Icons\Deck_Icons\9d.JPG" />
+    <None Remove="Icons\Deck_Icons\9h.JPG" />
+    <None Remove="Icons\Deck_Icons\9s.JPG" />
+    <None Remove="Icons\Deck_Icons\Ac.JPG" />
+    <None Remove="Icons\Deck_Icons\Ad.JPG" />
+    <None Remove="Icons\Deck_Icons\Ah.JPG" />
+    <None Remove="Icons\Deck_Icons\As.JPG" />
+    <None Remove="Icons\Deck_Icons\Jc.JPG" />
+    <None Remove="Icons\Deck_Icons\Jd.JPG" />
+    <None Remove="Icons\Deck_Icons\Jh.JPG" />
+    <None Remove="Icons\Deck_Icons\Js.JPG" />
+    <None Remove="Icons\Deck_Icons\Kc.JPG" />
+    <None Remove="Icons\Deck_Icons\Kd.JPG" />
+    <None Remove="Icons\Deck_Icons\Kh.JPG" />
+    <None Remove="Icons\Deck_Icons\Ks.JPG" />
+    <None Remove="Icons\Deck_Icons\Qc.JPG" />
+    <None Remove="Icons\Deck_Icons\Qd.JPG" />
+    <None Remove="Icons\Deck_Icons\Qh.JPG" />
+    <None Remove="Icons\Deck_Icons\Qs.JPG" />
+    <None Remove="Icons\Deck_Icons\Tc.JPG" />
+    <None Remove="Icons\Deck_Icons\Td.JPG" />
+    <None Remove="Icons\Deck_Icons\Th.JPG" />
+    <None Remove="Icons\Deck_Icons\Ts.JPG" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Icons\Deck_Icons\2c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\2d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\2h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\2s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\3c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\3d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\3h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\3s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\4c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\4d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\4h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\4s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\5c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\5d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\5h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\5s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\6c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\6d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\6h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\6s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\7c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\7d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\7h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\7s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\8c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\8d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\8h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\8s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\9c.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\9d.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\9h.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\9s.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Ac.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Ad.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Ah.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\As.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Jc.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Jd.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Jh.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Js.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Kc.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Kd.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Kh.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Ks.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Qc.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Qd.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Qh.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Qs.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Tc.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Td.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Th.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Icons\Deck_Icons\Ts.JPG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileWatcherService\FileWatcherService.csproj" />
+    <ProjectReference Include="..\HistoryHandLoader\HistoryHandLoader.csproj" />
+    <ProjectReference Include="..\PokerApp.Data\PokerApp.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="WindowScrape">
+      <HintPath>..\Dll\WindowScrape.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsInput">
+      <HintPath>..\Dll\WindowsInput.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+
+</Project>

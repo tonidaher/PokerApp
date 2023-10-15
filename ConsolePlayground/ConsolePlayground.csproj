@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FileWatcherService\FileWatcherService.csproj" />
+    <ProjectReference Include="..\HistoryHandLoader\HistoryHandLoader.csproj" />
+    <ProjectReference Include="..\PokerApp.Data\PokerApp.Data.csproj" />
+    <ProjectReference Include="..\PokerApp.Domain\PokerApp.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

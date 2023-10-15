@@ -1,0 +1,83 @@
+﻿<Window x:Class="PokerAppUI.PlayerHud"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PokerAppUI"
+        xmlns:cards="clr-namespace:PokerAppUI.CardControls"
+        mc:Ignorable="d"
+        Title="PlayerHud" Opacity="0.8" WindowStartupLocation="CenterOwner" WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" AllowsTransparency="True" Background="#FFACAACF" FontSize="10" FontFamily="Arial" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <local:MetricThresholdConverter x:Key="MetricThresholdConverter" />
+    </Window.Resources>
+    <StackPanel Orientation="Vertical">
+        <Grid MaxHeight="70">
+        <Grid.RowDefinitions>
+            <RowDefinition ></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+            <ColumnDefinition ></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Grid.ColumnSpan="2"  Text="{Binding PlayerName}"></TextBlock>
+        <TextBlock  Grid.Column="2" Grid.ColumnSpan="2" Margin="0,0,0,0" Text="{Binding HandsCount, StringFormat='({0}) '}"></TextBlock>
+        <TextBlock  Grid.Column="4" Margin="0,0,0,0" Foreground="{Binding Vpip, Converter={StaticResource MetricThresholdConverter}, ConverterParameter=Vpip}" Text="{Binding Vpip, StringFormat='Vp:{0} '}"></TextBlock>
+        <TextBlock  Grid.Column="5"   Margin="0,0,0,0" Foreground="{Binding Cbet, Converter={StaticResource MetricThresholdConverter}, ConverterParameter=CBet}" Text="{Binding Cbet,StringFormat='Cb:{0} '}"></TextBlock>
+        <TextBlock  Grid.Column="6" Grid.ColumnSpan="2" Foreground="{Binding Af, Converter={StaticResource MetricThresholdConverter}, ConverterParameter=Af}" Margin="0,0,0,0" Text="{Binding Af,StringFormat=' Af:{0}'}"></TextBlock>
+        <Button     Grid.Row="1" Grid.Column="0" x:Name="displayCardsButton" MaxHeight="30" Margin="0,0,0,0" FontSize="6" Background="{x:Null}" Click="DisplayCardsButton_Click">+</Button>
+            
+        <TextBlock  Grid.Row="1" Grid.Column="1" Foreground="White" Margin="0,0,0,0">In%</TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="2" Foreground="White" Margin="0,0,0,0">Fd</TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="3" Foreground="White" Margin="0,0,0,0">Ck</TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="4" Foreground="White" Margin="0,0,0,0">Cl</TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="5" Foreground="White" Margin="0,0,0,0">Bt</TextBlock>
+        <TextBlock  Grid.Row="1" Grid.Column="6" Foreground="White" Margin="0,0,0,0">Rs</TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Foreground="White" Margin="0,0,0,0">Pf</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="0" Foreground="White" Margin="0,0,0,0">Flp</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="0" Foreground="White" Margin="0,0,0,0">Trn</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="0" Foreground="White" Margin="0,0,0,0">Rvr</TextBlock>
+
+        <TextBlock  Grid.Row="3" Grid.Column="1" Foreground="White" Margin="0,0,0,0" Text="{Binding InF}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="1" Foreground="White" Margin="0,0,0,0" Text="{Binding InT}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="1" Foreground="White" Margin="0,0,0,0" Text="{Binding InR}"></TextBlock>
+
+        <TextBlock  Grid.Row="2" Grid.Column="2" Foreground="White" Margin="0,0,0,0" Text="{Binding PreFlopFold}"></TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="2" Foreground="White" Margin="0,0,0,0" Text="{Binding FlopFold}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="2" Foreground="White" Margin="0,0,0,0" Text="{Binding TurnFold}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="2" Foreground="White" Margin="0,0,0,0" Text="{Binding RiverFold}"></TextBlock>
+
+
+        <TextBlock  Grid.Row="2" Grid.Column="3" Foreground="White" Margin="0,0,0,0" Text="{Binding PreFlopCheck}"></TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="3" Foreground="White" Margin="0,0,0,0" Text="{Binding FlopCheck}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="3" Foreground="White" Margin="0,0,0,0" Text="{Binding TurnCheck}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="3" Foreground="White" Margin="0,0,0,0" Text="{Binding RiverCheck}"></TextBlock>
+
+        <TextBlock  Grid.Row="2" Grid.Column="4" Foreground="White" Margin="0,0,0,0" Text="{Binding PreFlopCall}"></TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="4" Foreground="White" Margin="0,0,0,0" Text="{Binding FlopCall}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="4" Foreground="White" Margin="0,0,0,0" Text="{Binding TurnCall}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="4" Foreground="White" Margin="0,0,0,0" Text="{Binding RiverCall}"></TextBlock>
+
+        <TextBlock  Grid.Row="3" Grid.Column="5" Foreground="White" Margin="0,0,0,0" Text="{Binding FlopBet}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="5" Foreground="White" Margin="0,0,0,0" Text="{Binding TurnBet}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="5" Foreground="White" Margin="0,0,0,0" Text="{Binding RiverBet}"></TextBlock>
+
+        <TextBlock  Grid.Row="2" Grid.Column="6" Foreground="{Binding PreFlopRaise, Converter={StaticResource MetricThresholdConverter}, ConverterParameter=PreFlopRaise}" Margin="0,0,0,0" Text="{Binding PreFlopRaise}"></TextBlock>
+        <TextBlock  Grid.Row="3" Grid.Column="6" Foreground="White" Margin="0,0,0,0" Text="{Binding FlopRaise}"></TextBlock>
+        <TextBlock  Grid.Row="4" Grid.Column="6" Foreground="White" Margin="0,0,0,0" Text="{Binding TurnRaise}"></TextBlock>
+        <TextBlock  Grid.Row="5" Grid.Column="6" Foreground="White" Margin="0,0,0,0" Text="{Binding RiverRaise}"></TextBlock>
+    </Grid>
+
+    <cards:HandCardsUserControl x:Name="cards" Visibility="Collapsed"></cards:HandCardsUserControl>
+    </StackPanel>
+</Window>

@@ -1,0 +1,61 @@
+﻿<Window x:Class="PokerAppUI.HandEvaluationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:cards="clr-namespace:PokerAppUI.CardControls"
+        xmlns:local="clr-namespace:PokerAppUI"
+        mc:Ignorable="d"
+        Title="HandEvaluationWindow"  WindowStyle="None" MouseDown="Window_MouseDown" SizeToContent="WidthAndHeight">
+    <Window.Resources>
+        <local:MetricThresholdConverter x:Key="MetricThresholdConverter" />
+    </Window.Resources>
+    <StackPanel Orientation="Vertical">
+
+        <StackPanel Orientation="Horizontal" >
+            <TextBlock>Hole cards :</TextBlock>
+            <Image x:Name="ImageHoleCard1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill"/>
+            <Image x:Name="ImageHoleCard2"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
+            <Grid x:Name="gridTest" Background="Black">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock  Grid.Row="0" Grid.Column="1" Margin="3,0,0,0" Foreground="White" >Count</TextBlock>
+                <TextBlock  Grid.Row="0" Grid.Column="2" Margin="3,0,0,0" Foreground="White" >Win%</TextBlock>
+                <TextBlock  Grid.Row="0" Grid.Column="3" Margin="3,0,0,0" Foreground="White" >Vpip Count</TextBlock>
+                <TextBlock  Grid.Row="0" Grid.Column="4" Margin="3,0,0,0" Foreground="White" >VpipWin%</TextBlock>
+                <TextBlock  Grid.Row="0" Grid.Column="5" Margin="3,0,0,0" Foreground="White" >Roi</TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="0" Margin="3,0,0,0" Foreground="White"  Text="{Binding Card}"></TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="1" Margin="3,0,0,0" Foreground="White"  Text="{Binding Count}"></TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="2" Margin="3,0,0,0" Foreground="White"  Text="{Binding WinPercent}"></TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="3" Margin="3,0,0,0" Foreground="White"  Text="{Binding VpipCount}"></TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="4" Margin="3,0,0,0" Foreground="White"  Text="{Binding WinAndVpipPercent}"></TextBlock>
+                <TextBlock  Grid.Row="3" Grid.Column="5" Margin="3,0,0,0" Foreground="{Binding RoiBBAmount, Converter={StaticResource MetricThresholdConverter}, ConverterParameter=Roi}" Text="{Binding RoiBBAmount}"></TextBlock>
+            </Grid>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Board :</TextBlock>
+            <Image x:Name="ImageBoardCard1"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill"/>
+            <Image x:Name="ImageBoardCard2"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
+            <Image x:Name="ImageBoardCard3"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill"/>
+            <Image x:Name="ImageBoardCard4"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
+            <Image x:Name="ImageBoardCard5"  HorizontalAlignment="Stretch" VerticalAlignment="Top" Stretch="UniformToFill" />
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <TextBlock>Odds :</TextBlock>
+            <Slider Minimum="1" Maximum="9" x:Name="opponentsSlider" Width="100" Ticks="1" TickFrequency="1" Value="2" ValueChanged="opponents_ValueChanged"></Slider>
+            <TextBox Text="{Binding ElementName=opponentsSlider, Path=Value, UpdateSourceTrigger=PropertyChanged}" DockPanel.Dock="Right" TextAlignment="Right" Width="40" />
+
+        </StackPanel>
+        <cards:HandEvaluationResultUserControl x:Name="handEvaluatorDisplayer"></cards:HandEvaluationResultUserControl>
+    </StackPanel>
+</Window>

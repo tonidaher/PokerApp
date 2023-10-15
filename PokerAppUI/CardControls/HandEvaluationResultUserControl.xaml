@@ -1,0 +1,76 @@
+﻿<UserControl x:Class="PokerAppUI.CardControls.HandEvaluationResultUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:PokerAppUI.CardControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800" Foreground="#FFFFFDFD" Background="Black" MinHeight="50" MinWidth="50">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="0">Player</TextBlock>
+        <TextBlock Grid.Column="1">Hand Value</TextBlock>
+        <TextBlock Grid.Column="2">Opponent</TextBlock>
+
+        <TextBlock Grid.Row="1"  Grid.Column="0" Text="{Binding Player.HighCard,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="1">High Card</TextBlock>
+        <TextBlock Grid.Row="1" Grid.Column="2" Text="{Binding Opponent.HighCard,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="2" Grid.Column="0" Text="{Binding Player.Pair,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="1">Pair</TextBlock>
+        <TextBlock Grid.Row="2" Grid.Column="2" Text="{Binding Opponent.Pair,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="3" Grid.Column="0" Text="{Binding Player.TwoPair,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="1">Two Pairs</TextBlock>
+        <TextBlock Grid.Row="3" Grid.Column="2" Text="{Binding Opponent.TwoPair,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="4" Grid.Column="0" Text="{Binding Player.ThreeOfAKind,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="1">3 of a Kind</TextBlock>
+        <TextBlock Grid.Row="4" Grid.Column="2" Text="{Binding Opponent.ThreeOfAKind,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="5" Grid.Column="0" Text="{Binding Player.Straight,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="1">Straight</TextBlock>
+        <TextBlock Grid.Row="5" Grid.Column="2" Text="{Binding Opponent.Straight,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="6" Grid.Column="0" Text="{Binding Player.Flush,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="1">Flush</TextBlock>
+        <TextBlock Grid.Row="6" Grid.Column="2" Text="{Binding Opponent.Flush,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="7" Grid.Column="0" Text="{Binding Player.FullHouse,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="1">Full House</TextBlock>
+        <TextBlock Grid.Row="7" Grid.Column="2" Text="{Binding Opponent.Flush,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="8" Grid.Column="0"  Text="{Binding Player.FourOfAKind,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="1">4 of a Kind</TextBlock>
+        <TextBlock Grid.Row="8" Grid.Column="2"  Text="{Binding Opponent.FourOfAKind,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="9" Grid.Column="0"  Text="{Binding Player.StraightFlush,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="1">Straight Flush</TextBlock>
+        <TextBlock Grid.Row="9" Grid.Column="2"  Text="{Binding Opponent.StraightFlush,StringFormat=' {0} %'}"></TextBlock>
+
+        <TextBlock Grid.Row="10" Grid.Column="0" Text="{Binding Player.WinPct,StringFormat=' {0} %'}"></TextBlock>
+        <TextBlock Grid.Row="10" Grid.Column="1">Win/Split</TextBlock>
+        <TextBlock Grid.Row="10" Grid.Column="2" Text="{Binding Opponent.WinPct,StringFormat=' {0} %'}"></TextBlock>
+
+
+
+
+    </Grid>
+</UserControl>
